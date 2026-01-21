@@ -1,0 +1,952 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Medical Atlas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #ffffff;
+      --muted: #9ca3af;
+      --accent: #06b6d4;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,sans-serif;
+      background:var(--bg);
+      color:rgb(0, 0, 0);
+    }
+    </style>
+
+  <!-- Estilos universales -->
+   <link rel="stylesheet" href="CSS/preloader.css">
+  <link rel="stylesheet" href="CSS/menu.css">
+  <link rel="stylesheet" href="CSS/footer.css">
+    </head>
+<body>
+<!-- ====== PRELOADER (único, minimal) ====== -->
+<div id="preloader">
+  <div class="preloader-content">
+    <img src="IMAGES/Logo_1.webp" alt="Logo" class="preloader-logo">
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="brand">
+    <img src="IMAGES/Logo_1.webp" alt="logo">
+  </div>
+
+  <!-- Menú -->
+  <div class="menu" id="menu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="todo.html">Todo</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+
+ 
+    <!-- Hamburguesa -->
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+
+<!-- Carrusel -->
+<div class="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="IMAGES/Ambulancia_2.webp" alt="Banner 1">
+      <div class="carousel-caption">
+        <h2>🚑 Traslados de emergencia</h2>
+        <p>Atención inmediata y traslado seguro en situaciones críticas.</p>
+        <a href="servicios.html#Traslados de Emergencia" class="btn">Más información</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="IMAGES/Ambulancia_2.webp" alt="Banner 2">
+      <div class="carousel-caption">
+        <h2>🏥 Traslados programados</h2>
+        <p>Movilidad médica puntual y confiable, sin contratiempos.</p>
+        <a href="servicios.html#Traslados Programados" class="btn">Más información</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="IMAGES/Ambulancia_2.webp" alt="Banner 3">
+      <div class="carousel-caption">
+        <h2>🧑‍⚕️ Ambulancia básica y avanzada</h2>
+        <p>Unidades equipadas con personal médico capacitado.</p>
+        <a href="servicios.html#Ambulancia Básica y Avanzada" class="btn">Más información</a>
+      </div>
+    </div>
+        <div class="carousel-item">
+      <img src="IMAGES/Ambulancia_2.webp" alt="Banner 4">
+      <div class="carousel-caption">
+        <h2>🎉 Cobertura de Eventos</h2>
+        <p>Unidades equipadas con personal médico capacitado.</p>
+        <a href="servicios.html#Cobertura de Eventos" class="btn">Más información</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botones -->
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+
+  <!-- Indicadores -->
+  <div class="dots"></div>
+</div>
+
+<style>.carousel {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.carousel-caption h2,
+.carousel-caption p {
+  color: #fff; /* texto blanco */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #ffffff;
+}
+
+.carousel-caption h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.dots {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dots .active {
+  background: #333;
+}
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 250px; /* más bajo en móvil */
+  }
+
+  .carousel-caption h2 {
+    font-size: 18px;
+  }
+
+  .carousel-caption p {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+</style>
+<script>const items = document.querySelectorAll('.carousel-item');
+const dotsContainer = document.querySelector('.dots');
+let index = 0;
+let interval = setInterval(nextSlide, 5000);
+
+// Crear dots
+items.forEach((_, i) => {
+  const dot = document.createElement('span');
+  dot.addEventListener('click', () => showSlide(i));
+  dotsContainer.appendChild(dot);
+});
+updateDots();
+
+document.querySelector('.prev').addEventListener('click', prevSlide);
+document.querySelector('.next').addEventListener('click', nextSlide);
+
+function showSlide(i) {
+  index = (i + items.length) % items.length;
+  document.querySelector('.carousel-inner').style.transform = `translateX(-${index * 100}%)`;
+  updateDots();
+  resetInterval();
+}
+
+function nextSlide() { showSlide(index + 1); }
+function prevSlide() { showSlide(index - 1); }
+
+function updateDots() {
+  document.querySelectorAll('.dots span').forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
+}
+
+function resetInterval() {
+  clearInterval(interval);
+  interval = setInterval(nextSlide, 5000);
+}
+</script>
+
+
+
+
+
+
+
+<section class="mb-section">
+  <div class="mb-image">
+    <img src="IMAGES/Logo_1.webp" alt="Mercedes-Benz eléctrico">
+  </div>
+
+  <div class="mb-content">
+    <h2>Profesionales salvando vidas</h2>
+    <p>Velocidad, experiencia y compromiso.</p>
+
+    <div class="mb-actions">
+      <a href="https://wa.me/525657923327" class="mb-btn outline">WhatsApp</a>
+      <a href="quienes-somos.html" class="mb-btn primary">Más información</a>
+    </div>
+  </div>
+</section>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+.mb-section {
+  display: flex;
+  align-items: center;
+  padding: 80px 10%;
+  gap: 70px;
+  background-color: #ffffff;
+}
+
+.mb-image {
+  flex: 1;
+}
+
+.mb-image img,
+.mb-image video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+.mb-content {
+  flex: 1;
+}
+
+.mb-content h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+.mb-content p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4a4a4a;
+  max-width: 520px;
+  margin-bottom: 35px;
+}
+
+.mb-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.mb-btn {
+  font-family: Arial, sans-serif;
+  padding: 13px 30px;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.mb-btn.outline {
+  border: 1px solid #000;
+  color: #000;
+}
+
+.mb-btn.outline:hover {
+  background: #000;
+  color: #fff;
+}
+
+.mb-btn.primary {
+  background: #0066b1;
+  color: #fff;
+}
+
+.mb-btn.primary:hover {
+  background: #004c87;
+}
+
+/* MÓVIL: imagen / video arriba (SIN order) */
+@media (max-width: 768px) {
+  .mb-section {
+    flex-direction: column;
+  }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="apps-section">
+  <div class="container">
+    <!-- Texto a la izquierda -->
+    <div class="text-block">
+      <h1>Ambulancias equipadas para cuidar lo más valioso: tu vida. </h1>
+      <p>
+      Ofrecemos traslados médicos seguros, atención prehospitalaria y cobertura para eventos, las 24 horas del día.<br>  
+       <br>
+        <a href="servicios.html">Solo en Medical Atlas</a>
+      </p>
+
+
+    </div>
+</section>
+
+<style>/* --- APARTADO DE APPS --- */
+.apps-section {
+  background: #000000;   /* color de fondo */
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.apps-section .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.text-block {
+  max-width: 400px;
+}
+.text-block h1 {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.text-block p {
+  font-size: 16px;
+  color: #ccc;
+}
+.text-block a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid #fff;
+}
+
+/* Apps en bloque */
+.apps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.app-icon {
+  width: 75px;
+  height: 75px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.app-icon img {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+}
+.app-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .apps-section .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .apps-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+}
+
+
+
+
+
+</style>
+
+<!-- SERVICIOS -->
+<section class="services">
+  <h3>Nuestros Servicios</h3>
+
+  <div class="service-grid">
+
+  <a href="servicios.html#Traslados de Emergencia" class="service-card">
+    🚑 Traslados de emergencia
+  </a>
+
+  <a href="servicios.html#Traslados Programados" class="service-card">
+    🏥 Traslados programados
+  </a>
+
+  <a href="servicios.html#Ambulancia Básica y Avanzada" class="service-card">
+    🧑‍⚕️ Ambulancia básica y avanzada
+  </a>
+
+  <a href="servicios.html#Cobertura de Eventos" class="service-card">
+    🎉 Cobertura de eventos
+  </a>
+
+</div>
+
+</section>
+
+<style>
+    /* =====================
+       SERVICIOS
+    ===================== */
+    .services {
+      background: #f8f8f8;
+      padding: 80px 10%;
+    }
+
+    .services h3 {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 50px;
+      font-family: 'Libre Baskerville', serif;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 6px;
+      text-align: center;
+    }
+</style>
+
+
+
+<!-- CTA -->
+<section class="cta">
+  <h4>¿Necesitas una ambulancia ahora?</h4>
+  <p>Atención inmediata las 24 horas</p>
+
+<a href="tel:+525657923327" class="btn-llamar">Llamar ahora</a>
+<style>
+.btn-llamar {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #d32f2f;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+   border: 2px solid white; /* 👈 borde blanco */
+}
+</style>
+
+</section>
+
+<style>
+/* =====================
+       CTA
+    ===================== */
+    .cta {
+      background: #d32f2f;
+      color: #fff;
+      text-align: center;
+      padding: 70px 10%;
+    }
+
+    .cta h4 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+<!-- ====== ESTILOS ====== -->
+<style>
+/* ====== SECCIÓN PRINCIPAL ====== */
+.stellar-top-transparent {
+  background: transparent;
+  padding: 50px 20px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.stellar-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* ====== CONTENEDOR Y CARRUSEL ====== */
+.hs-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hs-container {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px;
+  scrollbar-width: none;
+}
+.hs-container::-webkit-scrollbar { display: none; }
+
+/* ====== TARJETA DEL PRODUCTO ====== */
+.hs-product {
+  flex: 0 0 auto;
+  width: 200px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hs-product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 2px 15px rgba(255,255,255,0.2);
+}
+
+/* IGUAL AL CATÁLOGO */
+.hs-product img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center; /* <- mantiene centrada la gorra 31 Hats */
+  border-radius: 8px;
+}
+
+.hs-product h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 6px 0 4px;
+}
+
+.hs-product p {
+  font-weight: 700;
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+.hs-btn-shop {
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.hs-btn-shop:hover {
+  background: #ccc;
+  transform: scale(1.05);
+}
+
+/* ====== FLECHAS ====== */
+.hs-btn {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  transition: background 0.3s;
+}
+.hs-btn:hover {
+  background: rgba(255,255,255,0.3);
+}
+.hs-btn.left { left: 0; }
+.hs-btn.right { right: 0; }
+
+/* ====== RESPONSIVO ====== */
+@media (max-width: 768px) {
+  .hs-product { width: 180px; }
+  .hs-product img { height: 160px; }
+  .stellar-title { font-size: 1.6rem; }
+  .hs-btn { width: 35px; height: 35px; font-size: 1.6rem; }
+}
+</style>
+
+<!-- ====== SCRIPT ====== -->
+<script>
+const hsContainer = document.getElementById('hsContainer');
+const hsNextBtn = document.getElementById('hsNextBtn');
+const hsPrevBtn = document.getElementById('hsPrevBtn');
+
+hsNextBtn.addEventListener('click', () => {
+  hsContainer.scrollBy({ left: 250, behavior: 'smooth' });
+});
+
+hsPrevBtn.addEventListener('click', () => {
+  hsContainer.scrollBy({ left: -250, behavior: 'smooth' });
+});
+</script>
+
+<style>.todo-section {
+  background: #f9fafb;
+  padding: 80px 20px;
+}
+
+.todo-container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.todo-container h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.todo-subtitle {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+/* VIDEO RESPONSIVE */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* REDES */
+.social-section {
+  margin-top: 50px;
+}
+
+.social-section h3 {
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.social-icons a:hover {
+  background: #d32f2f;
+  transform: translateY(-3px);
+}
+</style>
+
+
+
+
+
+<!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo-contact">
+        <h2><img src="IMAGES/Logo_2.webp" alt="Logo 1" class="logo1"></h2>
+        <p><strong>Encuéntranos en</strong></p>
+        <p>📞 +52 56 5792 3327</p>
+        <p>Oaxaca , Oax</p>
+      </div>
+      <div class="footer-links">
+        <h4>¿Qué estás buscando?</h4>
+        <ul>
+          <li><a href="servicios.html#Traslados de Emergencia">🚑 Traslados de Emergencias</a></li>
+          <li><a href="servicios.html#Traslados Programados">🏥 Traslados Programados</a></li>
+          <li><a href="servicios.html#Ambulancia Básica y Avanzada">🧑‍⚕️ Ambulancia Básica y Avanzada</a></li>
+          <li><a href="servicios.html#Cobertura de Eventos">🎉 Cobertura de Eventos</a></li>
+
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Síguenos en nuestras redes sociales</h4>
+        <div class="social-icons">
+         <a href="https://www.facebook.com/share/1Ck5wcm6fi/?mibextid=wwXIfr"><img src="IMAGES/FB8.webp" alt="Facebook" /></a>
+          <a href="https://www.instagram.com/stellar_hp?igsh=MXUzajNnMzFmNnZsOA=="><img src="IMAGES/IG3.webp" alt="Instagram" /></a>
+          <a href="https://www.tiktok.com/@stellar_hp?_t=ZS-90aIYXQ7CwD&_r=1"><img src="IMAGES/TT2.webp" alt="TikTok" /></a>
+          <a href="https://www.youtube.com/@StellarHp"><img src="IMAGES/YT4.webp" alt="YouTube" /></a>
+        </div>
+        <p>Asociados con:</p>
+          <a href="https://www.instagram.com/fmmg_frank?igsh=MWY2cTdxNXJibThpNw%3D%3D&utm_source=qr"><img src="IMAGES/Logo1.webp" alt="AMPI México" class="ampi-logo" /></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Medical Atlas. Todos los derechos reservados.</p>
+      <p>Software FMMG_Frank</p>
+    </div>
+  </footer>
+<style>/* Evita color morado y subrayado en enlaces y botones */
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit; /* mantiene el color del diseño */
+}
+
+/* Si usas botones tipo enlace */
+button, .btn-detalles, .btn-vermas {
+  text-decoration: none;
+  color: #fff;
+  background-color: #111;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Efecto hover uniforme */
+button:hover, .btn-detalles:hover, .btn-vermas:hover {
+  background-color: #fffffd;
+  color: #111;
+}
+</style>
+
+
+
+  <!-- ✅ Scripts universales -->
+  <!-- ✅ Scripts universales -->
+  <!-- ✅ Scripts universales -->
+  <!-- ✅ Scripts universales -->
+  <!-- ✅ Scripts universales -->
+  <script src="JS/menu.js"></script>
+  <script src="JS/preloader.js"></script>
+<script>const cartBtn = document.getElementById('cartBtn');
+const cartPanel = document.getElementById('cartPanel');
+const closeCart = document.getElementById('closeCart');
+const cartItemsContainer = document.getElementById('cartItems');
+const cartCount = document.getElementById('cartCount');
+const cartTotalLine = document.getElementById('cartTotalLine');
+const checkoutBtn = document.getElementById('checkoutBtn');
+
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+function saveCart() {
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+function updateCart() {
+  cartItemsContainer.innerHTML = '';
+  let total = 0;
+
+  cart.forEach((item, index) => {
+    const div = document.createElement('div');
+    div.classList.add('cart-item');
+    div.innerHTML = `
+      <img src="${item.image}" alt="${item.name}">
+      <div class="cart-info">
+        <p><strong>${item.name}</strong></p>
+        <p>$${item.price} x ${item.quantity}</p>
+      </div>
+      <button class="remove-btn" data-index="${index}">✖</button>
+    `;
+    cartItemsContainer.appendChild(div);
+    total += item.price * item.quantity;
+  });
+
+  cartCount.textContent = cart.length;
+  cartTotalLine.textContent = `Total: $${total.toFixed(2)} MXN`;
+  saveCart();
+
+  if (cart.length === 0) {
+    cartItemsContainer.innerHTML = 'Vacío';
+  }
+
+  document.querySelectorAll('.remove-btn').forEach(btn => {
+    btn.onclick = () => {
+      const index = btn.dataset.index;
+      cart.splice(index, 1);
+      updateCart();
+    };
+  });
+}
+
+cartBtn.onclick = () => cartPanel.classList.add('open');
+closeCart.onclick = () => cartPanel.classList.remove('open');
+
+window.addToCart = function(name, price, image) {
+  const existing = cart.find(item => item.name === name);
+  if (existing) {
+    existing.quantity++;
+  } else {
+    cart.push({ name, price, image, quantity: 1 });
+  }
+  updateCart();
+  cartPanel.classList.add('open');
+};
+
+checkoutBtn.onclick = () => {
+  if (cart.length === 0) return alert('Tu carrito está vacío');
+  const message = cart
+    .map(item => `${item.name} (${item.quantity}) - $${item.price * item.quantity}`)
+    .join('%0A');
+  const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const text = `Hola, quiero realizar una compra:%0A${message}%0ATotal: $${total.toFixed(2)} MXN`;
+  window.open(`https://wa.me/?text=${text}`, '_blank');
+};
+
+updateCart();
+</script>
+ 
+</body>
+</html>

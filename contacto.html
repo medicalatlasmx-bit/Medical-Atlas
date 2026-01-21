@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contacto — ¿Cómo Solicitar el Servicio?</title>
+  <meta name="description" content="Dónde contactarnos y el paso a paso de Cómo Comprar en nuestra tienda.">
+  <style>
+    :root{
+      --accent:#0f766e;
+      --accent-dark:#064e47;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f8fafc;
+      --glass: rgba(255,255,255,0.6);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#eff6ff);color:#0f172a}
+    .container{max-width:1100px;margin:32px auto;padding:20px}
+    header{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    h1{font-size:1.5rem;margin:0}
+    p.lead{color:var(--muted);margin:6px 0 18px}
+
+    .grid{display:grid;grid-template-columns:1fr 380px;gap:20px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr} .card-contact{order:2}}
+
+    .card{background:var(--card);border-radius:14px;box-shadow:0 6px 18px rgba(15,23,42,0.06);padding:18px}
+    .card h2{margin-top:0}
+
+    .contacts{display:flex;flex-direction:column;gap:12px}
+    .contact-row{display:flex;gap:12px;align-items:center}
+    .icon{width:44px;height:44px;border-radius:10px;background:var(--glass);display:flex;align-items:center;justify-content:center;font-weight:700}
+    .meta{display:flex;flex-direction:column}
+    .meta small{color:var(--muted)}
+
+    form .row{display:flex;gap:10px}
+    form input, form textarea{width:100%;padding:10px;border:1px solid #e6e9ef;border-radius:8px;font-size:0.95rem}
+    form textarea{min-height:110px;resize:vertical}
+    .btn-primary{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;border:0;font-weight:600;cursor:pointer}
+    .btn-ghost{background:transparent;border:1px solid #e6e9ef;padding:9px 12px;border-radius:10px;cursor:pointer}
+
+    .steps{display:flex;flex-direction:column;gap:12px}
+    .step{display:flex;gap:12px;align-items:flex-start}
+    .step .num{min-width:36px;height:36px;border-radius:8px;background:var(--accent);color:white;display:flex;align-items:center;justify-content:center;font-weight:700}
+    .step p{margin:0}
+
+    .small{font-size:0.9rem;color:var(--muted)}
+
+.whats {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.whats a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whats svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+
+
+
+    a:focus, button:focus, input:focus, textarea:focus{outline:3px solid rgba(15,118,110,0.12);outline-offset:2px}
+
+    .brand-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.logo-header {
+  width: 70px;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.logo-header img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Responsive: centra el contenido si es pantalla pequeña */
+@media (max-width: 768px) {
+  .brand-header {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+  </style>
+    <!-- Estilos universales -->
+  <link rel="stylesheet" href="CSS/menu.css">
+  <link rel="stylesheet" href="CSS/footer.css">
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="brand">
+    <img src="IMAGES/Logo_1.webp" alt="logo">
+  </div>
+
+  <!-- Menú -->
+  <div class="menu" id="menu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="quienes-somos.html">¿Quiénes Somos?</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="todo.html">Todo</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+
+  <div class="actions">
+
+    <!-- Hamburguesa -->
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<style>.todo-section {
+  background: #f9fafb;
+  padding: 80px 20px;
+}
+
+.todo-container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.todo-container h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.todo-subtitle {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+/* VIDEO RESPONSIVE */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* REDES */
+.social-section {
+  margin-top: 50px;
+}
+
+.social-section h3 {
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.social-icons a:hover {
+  background: #d32f2f;
+  transform: translateY(-3px);
+}
+</style>
+<div class="brand-header">
+  <div class="brand-image">
+    <img src="IMAGES/Logo_1.webp" alt="Imagen corporativa">
+  </div>
+</div>
+
+        <div>
+          <h1>Medical Atlas — Contacto</h1>
+          <p class="lead">¿Dudas? ¿Soporte?
+          Aquí te explicamos cómo solicitar un servicio de forma rápida y segura.</p>
+        </div>
+      </div>
+    </header>
+<style>/* Imagen principal del encabezado */
+.brand-image {
+  width: 150px;          /* tamaño base */
+  height: 200px;
+  border-radius: 12px;  /* bordes suaves */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-image img {
+  width:150px;
+  height: 200px;
+  object-fit: contain;
+  display: block;
+}
+</style>
+    <main class="grid" role="main">
+      <section>
+        <div class="card">
+          <h2 id="comprar">¿Cómo Solicitar el Servicio?</h2>
+          <p class="small">Hicimos un proceso sencillo en 5 pasos — Diseñado para brindar atención inmediata y segura.
+          Sigue estos pasos para solicitar una ambulancia.</p>
+
+          <div class="steps" style="margin-top:14px">
+            <div class="step"><div class="num">1</div><div><p><strong>Contacto inicial</strong></p><p class="small">Comunícate vía llamada o WhatsApp para solicitar el servicio.</p></div></div>
+            <div class="step"><div class="num">2</div><div><p><strong>Información del paciente</strong></p><p class="small">Indica ubicación exacta, condición del paciente y tipo de traslado.</p></div></div>
+            <div class="step"><div class="num">3</div><div><p><strong>Confirmación del servicio</strong></p><p class="small">Se valida disponibilidad, tipo de unidad y costo aproximado.</p></div></div>
+            <div class="step"><div class="num">4</div><div><p><strong>Despacho y atención</strong></p><p class="small">  La unidad es enviada y el personal médico inicia atención prehospitalaria.</p></div></div>
+            <div class="step"><div class="num">5</div><div><p><strong>Traslado y entrega</strong></p><p class="small">El paciente es trasladado y entregado al hospital o destino indicado.</p></div></div>
+          </div>
+
+          <hr style="margin:18px 0;border:none;border-top:1px solid #eef2f7">
+
+          <h3>Preguntas frecuentes</h3>
+          <details><summary>¿Cuánto tarda el envío?</summary><p class="small">Contamos con servicio disponible las 24 horas, los 7 días de la semana.</p></details>
+          <details><summary>¿Puedo cancelar mi pedido?</summary><p class="small">Sí, mientras esté en estado "Procesando".</p></details>
+       <details>
+          <summary>¿De qué depende el costo del servicio?</summary>
+          <p class="small">
+            Depende de la distancia, tipo de unidad, horario y nivel de atención requerida.
+          </p>
+        </details>
+      </div>
+
+        <div class="card" style="margin-top:16px">
+          <h2>Medios de pago</h2>
+          <p class="small">Aceptamos tarjetas Visa, MasterCard, transferencias y pagos en efectivo.</p>
+          <ul class="small" style="padding-left:18px;margin:8px 0">
+            <li>Tarjeta en línea</li>
+            <li>Transferencia SPEI / OXXO</li>
+            <li>Pago contra entrega (sujeto a revisión)</li>
+          </ul>
+        </div>
+      </section>
+
+      <aside class="card card-contact">
+        <h2>Contáctanos</h2>
+        <div class="contacts" style="margin-top:10px">
+          <div class="contact-row"><div class="icon">📞</div><div class="meta"><strong>Llámanos</strong><small>+52 56 5792 3327</small></div></div>
+          <div class="contact-row"><div class="icon">💬</div><div class="meta"><strong>WhatsApp</strong><small><a href="https://wa.me/5215657923327" target="_blank">Inicia chat</a></small></div></div>
+          <div class="contact-row"><div class="icon">📧</div><div class="meta"><strong>Email</strong><small><a href="mailto:PRIXMAMENTE">PROXIMAMENTE</a></small></div></div>
+          <div class="contact-row"><div class="icon">🏬</div><div class="meta"><strong>Tienda física</strong><small>PROXIMAMENTE</small></div></div>
+        </div>
+
+        <hr style="margin:14px 0;border:none;border-top:1px solid #eef2f7">
+
+        <h3>Escribenos una reseña</h3>
+        <form id="contactForm">
+          <div class="row" style="margin-bottom:10px"><input type="text" id="name" name="name" placeholder="Tu nombre" required></div>
+          <div class="row" style="margin-bottom:10px"><input type="email" id="email" name="email" placeholder="Correo electrónico" required></div>
+          <div style="margin-bottom:10px"><textarea id="message" name="message" placeholder="¿En qué te ayudamos?" required></textarea></div>
+          <div style="display:flex;gap:8px;justify-content:flex-end">
+            <button type="reset" class="btn-ghost">Limpiar</button>
+            <button type="submit" class="btn-primary">Enviar mensaje</button>
+          </div>
+          <p id="formMsg" class="small" style="margin-top:10px;display:none"></p>
+        </form>
+      </aside>
+    </main>
+
+<!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo-contact">
+        <h2><img src="IMAGES/Logo_2.webp" alt="Logo 1" class="logo1"></h2>
+        <p><strong>Encuéntranos en</strong></p>
+        <p>📞 +52 56 5792 3327</p>
+        <p>Oaxaca , Oax</p>
+      </div>
+      <div class="footer-links">
+        <h4>¿Qué estás buscando?</h4>
+        <ul>
+          <li><a href="servicios.html#Traslados de Emergencia">🚑 Traslados de Emergencias</a></li>
+          <li><a href="servicios.html#Traslados Programados">🏥 Traslados Programados</a></li>
+          <li><a href="servicios.html#Ambulancia Básica y Avanzada">🧑‍⚕️ Ambulancia Básica y Avanzada</a></li>
+          <li><a href="servicios.html#Cobertura de Eventos">🎉 Cobertura de Eventos</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Síguenos en nuestras redes sociales</h4>
+        <div class="social-icons">
+         <a href="https://www.facebook.com/share/1Ck5wcm6fi/?mibextid=wwXIfr"><img src="IMAGES/FB8.webp" alt="Facebook" /></a>
+          <a href="https://www.instagram.com/stellar_hp?igsh=MXUzajNnMzFmNnZsOA=="><img src="IMAGES/IG3.webp" alt="Instagram" /></a>
+          <a href="https://www.tiktok.com/@stellar_hp?_t=ZS-90aIYXQ7CwD&_r=1"><img src="IMAGES/TT2.webp" alt="TikTok" /></a>
+          <a href="https://www.youtube.com/@StellarHp"><img src="IMAGES/YT4.webp" alt="YouTube" /></a>
+        </div>
+        <p>Asociados con:</p>
+          <a href="https://www.instagram.com/fmmg_frank?igsh=MWY2cTdxNXJibThpNw%3D%3D&utm_source=qr"><img src="IMAGES/Logo1.webp" alt="AMPI México" class="ampi-logo" /></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Medical Atlas. Todos los derechos reservados.</p>
+      <p>Software FMMG_Frank</p>
+    </div>
+  </footer>
+  </div>
+
+<div class="whats">
+  <a href="https://wa.me/5215657923327" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="24" fill="#25D366">
+      <path d="M16 0C7.2 0 .1 7.1.1 15.9c0 2.8.7 5.4 2 7.7L0 32l8.6-2.2c2.2 1.2 4.8 1.8 7.4 1.8 8.8 0 15.9-7.1 15.9-15.9C31.9 7.1 24.8 0 16 0zm0 29.3c-2.3 0-4.5-.6-6.5-1.7l-.5-.3-5.1 1.3 1.4-4.9-.3-.5c-1.3-2-1.9-4.3-1.9-6.7C3.1 8.5 8.9 2.7 16 2.7S28.9 8.5 28.9 15.6 23.1 29.3 16 29.3zm7.2-8.6c-.4-.2-2.3-1.1-2.6-1.2s-.6-.2-.9.2-1 1.2-1.3 1.4-.5.3-.9.1-1.8-.7-3.4-2.1c-1.3-1.2-2.1-2.7-2.3-3.1s0-.7.2-1c.2-.2.5-.6.7-.9.2-.3.3-.5.5-.9.2-.4.1-.7 0-1s-.9-2.2-1.3-3c-.3-.7-.7-.6-.9-.6h-.8c-.3 0-.7.1-1 .5-.3.4-1.3 1.2-1.3 2.9s1.3 3.3 1.5 3.6c.2.3 2.6 4 6.3 5.6.9.4 1.6.7 2.2.9.9.3 1.7.2 2.3.1.7-.1 2.3-.9 2.7-1.8s.3-1.6.2-1.8c-.2-.4-.4-.5-.8-.7z"/>
+    </svg>
+  </a>
+</div>
+
+
+  <script>
+    // --- Formulario de contacto ---
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const msgEl = document.getElementById('formMsg');
+      if(!name || !email || !message){
+        msgEl.style.display='block';
+        msgEl.textContent='Por favor completa todos los campos.';
+        return;
+      }
+      msgEl.style.display='block';
+      msgEl.textContent='Enviando mensaje...';
+      setTimeout(()=>{
+        msgEl.textContent='Gracias, tu mensaje fue enviado. Te responderemos pronto.';
+        document.getElementById('contactForm').reset();
+      },800);
+    });
+  </script>
+    <!-- ✅ Scripts universales -->
+  <!-- ✅ Scripts universales -->
+  <!-- ✅ Scripts universales -->
+  <!-- ✅ Scripts universales -->
+  <!-- ✅ Scripts universales -->
+  <script src="JS/menu.js"></script>
+<script>const cartBtn = document.getElementById('cartBtn');
+const cartPanel = document.getElementById('cartPanel');
+const closeCart = document.getElementById('closeCart');
+const cartItemsContainer = document.getElementById('cartItems');
+const cartCount = document.getElementById('cartCount');
+const cartTotalLine = document.getElementById('cartTotalLine');
+const checkoutBtn = document.getElementById('checkoutBtn');
+
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+function saveCart() {
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+function updateCart() {
+  cartItemsContainer.innerHTML = '';
+  let total = 0;
+
+  cart.forEach((item, index) => {
+    const div = document.createElement('div');
+    div.classList.add('cart-item');
+    div.innerHTML = `
+      <img src="${item.image}" alt="${item.name}">
+      <div class="cart-info">
+        <p><strong>${item.name}</strong></p>
+        <p>$${item.price} x ${item.quantity}</p>
+      </div>
+      <button class="remove-btn" data-index="${index}">✖</button>
+    `;
+    cartItemsContainer.appendChild(div);
+    total += item.price * item.quantity;
+  });
+
+  cartCount.textContent = cart.length;
+  cartTotalLine.textContent = `Total: $${total.toFixed(2)} MXN`;
+  saveCart();
+
+  if (cart.length === 0) {
+    cartItemsContainer.innerHTML = 'Vacío';
+  }
+
+  document.querySelectorAll('.remove-btn').forEach(btn => {
+    btn.onclick = () => {
+      const index = btn.dataset.index;
+      cart.splice(index, 1);
+      updateCart();
+    };
+  });
+}
+
+cartBtn.onclick = () => cartPanel.classList.add('open');
+closeCart.onclick = () => cartPanel.classList.remove('open');
+
+window.addToCart = function(name, price, image) {
+  const existing = cart.find(item => item.name === name);
+  if (existing) {
+    existing.quantity++;
+  } else {
+    cart.push({ name, price, image, quantity: 1 });
+  }
+  updateCart();
+  cartPanel.classList.add('open');
+};
+
+checkoutBtn.onclick = () => {
+  if (cart.length === 0) return alert('Tu carrito está vacío');
+  const message = cart
+    .map(item => `${item.name} (${item.quantity}) - $${item.price * item.quantity}`)
+    .join('%0A');
+  const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const text = `Hola, quiero realizar una compra:%0A${message}%0ATotal: $${total.toFixed(2)} MXN`;
+  window.open(`https://wa.me/?text=${text}`, '_blank');
+};
+
+updateCart();
+</script>
+</body>
+</html>
